@@ -1,0 +1,183 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  canvas {
+    position: absolute;
+  }
+
+  /*imports*/
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+    
+    .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    }
+    
+    .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    }
+    
+    .roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    }
+    
+    /*misc*/
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%; /* Ensure the body and html take the full height */
+        width: 100%;  /* Ensure the body and html take the full width */
+        overflow: hidden; /* Optional: hides any scrollbars if needed */
+    }
+    
+    .content {
+        background-image: url("imgs/tulipBackground.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        display: flex;
+    }
+    
+    /*timer*/
+    
+    .hidden {
+        visibility: hidden;
+        display: none;
+    }
+    
+    .timer {
+        display: flex;
+        flex-direction: column;
+        width: 20em;
+        background-color: #FEFAF6;
+        font-size: large;
+        padding: 1em;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+    
+    .elements {
+        display: flex;
+        background-color: #FEFAF6;
+        border-radius: 10px;
+        margin: 15px;
+    }
+    
+    .cursor {
+        cursor: pointer;
+    }
+    
+    .timerChoices, .timerTopBar, .timerContent {
+        display: flex;
+    }
+    
+    .timerTopBar {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .timerContent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height:fit-content
+    }
+    
+    .timerStart {
+        border-color: #dd9f9b;
+        background-color: #FEFAF6;
+        border-style: solid;
+        padding: .3em;
+        border-radius: 10px;
+        width: 10em;
+        height: fit-content;
+    }
+    
+    .timerCountdown {
+        font-size: 50px;
+    }
+    
+    .timerChoices {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: fit-content;
+    }
+    
+    /*streaming */
+    #webcam {
+        width: 30em;
+        border-radius: 10px;
+        margin: 15px;
+    }
+    
+    .video {
+        display: flex;
+        width: fit-content;
+        justify-content: right;
+        padding: 3em;
+        background-color: #FEFAF6;
+        border-radius: 10px;
+        margin: 15px;
+    }
+    
+    /*sidebar*/
+    
+    .sideBar {
+        display: flex;
+        flex-direction: column;
+        padding: .7em;
+        width: fit-content;
+        background-color: #FEFAF6;
+        border-radius: 10px;
+        margin: 15px;
+        height: fit-content
+    }
+    
+    .icon {
+        width: 2em;
+        margin: 15px;
+    }
+    
+    .video {
+        display: flex;
+        width: fit-content;
+        justify-content: right;
+        padding: 3em;
+        background-color: #FEFAF6;
+        border-radius: 10px;
+        margin: 15px;
+        position: relative; /* Ensure the overlay is positioned relative to this */
+    }
+    
+    #overlay {
+        position: absolute;
+        top: 0; /* Align it to the top */
+        left: 0; /* Align it to the left */
+        width: 100%; /* Full width of the video */
+        height: 100%; /* Full height of the video */
+        pointer-events: none; /* Allow mouse events to pass through */
+    }
+    
+    
