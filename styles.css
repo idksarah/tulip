@@ -264,6 +264,7 @@ height: 9em;
 .docs {
     width: 80vw;
     margin: 2em;
+    margin-top: 6em;
 }
 
 .notes {
@@ -272,10 +273,16 @@ height: 9em;
 }
 
 .bottomIcon {
-    
 position: absolute;
 z-index: 100;
 margin-top: 85em;
 margin-left: 55em;
 height: 12em;
+}
+
+.spotifyPlayer {
+    z-index: 1000;
+    position: absolute;
+    margin-left: -57em;
+    height: 30em;
 }
