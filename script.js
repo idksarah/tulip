@@ -46,6 +46,7 @@ function playTimer() {
   timerStart.style.color = "#FFFFFF";
   timerStart.textContent = "stop";
   const timerCountdown = document.querySelector(".timerCountdown");
+  timerCountdown.style.color   = "#dd9f9b";
   if (timerCountdown) {
     let time = timerCountdown.textContent;
     let a = time?.split(':') || ['0', '0'];
@@ -109,9 +110,9 @@ function startVideo() {
 video.addEventListener('play', () => {
   const canvas = faceapi.createCanvasFromMedia(video);
   canvas.style.position = 'absolute';
-  canvas.style.left = '11em';
-  canvas.style.top = '24em';
-  canvas.classList.add("hidden"); //unhide this for demo
+  canvas.style.left = '43em';
+  canvas.style.top = '13em';
+  //canvas.classList.add("hidden"); //unhide this for demo
   document.body.append(canvas);
   const displaySize = { width: video.width, height: video.height };
   faceapi.matchDimensions(canvas, displaySize);
@@ -134,8 +135,10 @@ video.addEventListener('play', () => {
     }
 
     if (currentExpression === "sad" || currentExpression === "happy") {
+      canvas.classList.add("hidden"); 
       if(currentZoom!=200){
         currentZoom += 50; 
+        
         htmlElement.style.fontSize = currentZoom + "%";
       }
     }
@@ -143,3 +146,13 @@ video.addEventListener('play', () => {
 });
 
 startVideo();
+
+const audio = new Audio('./fromTheStart.mp3');
+
+spotifyPlayer.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+});
