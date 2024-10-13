@@ -1,3 +1,5 @@
+<!--built by sarah nyai 10/12/24 :3-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,53 +7,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>tulip: helping you bloom</title>
-  
-  <title>tulip: helping you bloom</title>
   <link rel="shortcut icon" href="./imgs/tulipIcon.png">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="styles.css">
   <script defer src="face-api.min.js"></script>
   <script defer src="script.js"></script>
 </head>
 <body>
   <div class="content">
+    <img src="./imgs/tulipIcon.png" class="bottomTulip">
     <div class="sideBar">
         <img class="timerIcon icon cursor" src="./imgs/stopwatch.png">
         <img class="taskIcon icon cursor" src="./imgs/pencil.png">
         <img class="music icon cursor" src="./imgs/music-note.png">
+        <img class="spotify icon cursor" src="./imgs/spotify-logo.png">
+        <img class="spotify icon cursor" src="./imgs/photo-camera-interface-symbol-for-button.png">
     </div>
     <div class="freeSpace">
-        <div class="leftSpace">
-            <div class="focusGraph hidden elements">focus</div>
+        <div class="topBar">
+                <img src="./imgs/tulipIcon.png" class="topIcon">
+                <p class="roboto-bold tulipText">tulip: helping you bloom</p>
         </div>
         <div class="rightSpace">
-            <div class="timer roboto-regular elements">
-                <div class="timerTopBar">
-                    <p class="timerTitle roboto-bold text">timer</p>
-                    <p class="timerExit roboto-bold cursor">-</p>
+            <div class="timerAndCam">
+                <div class="timer roboto-regular elements">
+                    <div class="timerTopBar">
+                        <p class="timerTitle roboto-bold text">timer</p>
+                        <p class="timerExit roboto-bold cursor exit">-</p>
+                    </div>
+                    <div class="timerContent">
+                        <p class="timerCountdown">25:00</p>
+                        <button class="timerStart cursor">start</button>
+                    </div>
+                    <div class="timerChoices">
+                        <p class="pomodoro text cursor">pomodoro</p>
+                        <p class="shortBreak text cursor">short break</p>
+                        <p class="longBreak text cursor">long break</p>
+                    </div>
                 </div>
-                <div class="timerContent">
-                    <p class="timerCountdown">25:00</p>
-                    <button class="timerStart cursor">start</button>
-                </div>
-                <div class="timerChoices">
-                    <p class="pomodoro text cursor">pomodoro</p>
-                    <p class="shortBreak text cursor">short break</p>
-                    <p class="longBreak text cursor">long break</p>
+                <div class="video">              
+                    <video id="video" width="720" height="560" autoplay muted></video>
+                    <canvas id="overlay" class="hidden"></canvas>
+                    <div class="videoSide">
+                        <p class="webcamExit roboto-bold cursor exit">-</p>
+                        <button class="toggleZoom cursor">turn on zoom?</button>
+                    </div>
                 </div>
             </div>
-            <div class="video">              
-                <video id="video" width="720" height="560" autoplay muted></video>
-                <canvas id="overlay"></canvas>
-                <p class="webcamExit roboto-bold cursor">-</p>
-            </div>
+            <img src="./imgs/tulipIcon.png" class="bottomIcon">
         </div>
+        <img class ="docs cursor" src="./imgs/docs.png">
+        <img class="notes cursor" src="./imgs/notes.png">
     </div>
-</div>
+  </div>
 </body>
 </html>
-<!---->
